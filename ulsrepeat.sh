@@ -7,6 +7,7 @@ then
     echo "quit - exits uls"
     echo "clear - clears the console or terminal"
     echo "update - updates the running linux distro"
+    echo "ulsupdate - updates ULS"
     echo "listpackages - lists all installed packages"
     echo "install list - used to install applications (apt for beginners)"
     echo "minecraft - installs and runs minecraft"
@@ -35,9 +36,18 @@ then
     sudo aptitude update && sudo aptitude upgrade
 fi
 
+if [[ $REPLY = ulsupdate ]]
+then
+    cd ..
+    rm -rf ultimatelinux.sh
+    git clone https://github.com/josephworks/ultimatelinux.sh
+    cd ultimatelinux.sh
+    echo "please restart ULS"
+fi
+
 if [[ $REPLY = listpackages ]]
 then
-    dpkg --get-selections
+    sudo dpkg -l
 fi
 
 if [[ $REPLY = install ]]
@@ -53,6 +63,7 @@ then
     echo "maven"
     echo "npm"
     echo "nodejs"
+    echo "docker"
 fi
 
 if [[ $REPLY = "install java" ]]
@@ -73,6 +84,11 @@ fi
 if [[ $REPLY = "install nodejs" ]]
 then
     sudo apt install npm -y
+fi
+
+if [[ $REPLY = "install docker" ]]
+then
+    sudo apt install docker.io -y
 fi
 
 sudo bash ulsrepeat.sh
