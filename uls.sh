@@ -4,12 +4,20 @@ echo "Starting"
 
 # depends -----------------------------------
 echo "Installing depends..."
-apt install toilet figlet -y
+apt install toilet figlet screenfetch -y
 read -p "Would you like to install additional dependencies? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     sudo apt install aptitude #additional depends here
 fi
+# -------------------------------------------
+
+# terminal setup ----------------------------
+clear
+screenfetch
+sleep 5
+clear
+color a
 # -------------------------------------------
 
 read -p "ULS> "
