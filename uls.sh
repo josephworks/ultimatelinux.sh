@@ -4,6 +4,7 @@ echo "Starting"
 
 # depends -----------------------------------
 echo "Installing depends..."
+apt update
 apt install toilet figlet screenfetch wget -y
 read -p "Would you like to install additional dependencies? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
