@@ -44,3 +44,14 @@ then
     echo "Invalid Usage: install [App]"
     echo "To see a list of apps you wan install, run "install list""
 fi
+
+if [[ $REPLY = install list ]]
+then
+    echo "Installable Apps:"
+    echo "java"
+fi
+
+if [[ $REPLY = install java ]]
+then
+    sudo apt install default-jre default-jdk -y
+fi
