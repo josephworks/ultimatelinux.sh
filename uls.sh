@@ -49,9 +49,27 @@ if [[ $REPLY = install list ]]
 then
     echo "Installable Apps:"
     echo "java"
+    echo "maven"
+    echo "npm"
+    echo "nodejs"
 fi
 
 if [[ $REPLY = install java ]]
 then
     sudo apt install default-jre default-jdk -y
+fi
+
+if [[ $REPLY = install maven ]]
+then
+    apt install maven -y
+fi
+
+if [[ $REPLY = install npm ]]
+then
+    sudo apt install npm -y
+fi
+
+if [[ $REPLY = install nodejs ]]
+then
+    sudo apt install npm -y
 fi
