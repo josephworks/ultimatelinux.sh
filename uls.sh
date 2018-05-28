@@ -17,7 +17,6 @@ clear
 screenfetch
 sleep 5
 clear
-color a
 # -------------------------------------------
 
 read -p "ULS> "
