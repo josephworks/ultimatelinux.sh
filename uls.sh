@@ -4,7 +4,7 @@ echo "Starting"
 
 # depends -----------------------------------
 echo "Installing depends..."
-apt install toilet figlet screenfetch -y
+apt install toilet figlet screenfetch wget -y
 read -p "Would you like to install additional dependencies? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -29,11 +29,20 @@ then
     echo "update - updates the running linux distro"
     echo "listpackages - lists all installed packages"
     echo "install list - used to install applications (apt for beginners)"
+    echo "minecraft - installs and runs minecraft"
 fi
 
 if [[ $REPLY = quit ]]
 then
     exit
+fi
+
+if [[ $REPLY = minecraft ]]
+then
+    sudo apt install default-jre default-jdk -y
+    wget http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar
+    rm Minecraft.jar.*
+    java -jar Minecraft.jar
 fi
 
 if [[ $REPLY = update ]]
