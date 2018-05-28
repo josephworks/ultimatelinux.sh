@@ -11,3 +11,14 @@ then
     sudo apt install #additional depends here
 fi
 # -------------------------------------------
+read -p "ULS> "
+
+if [[ $REPLY = help ]]
+then
+    printf "Commands"
+fi
+
+if [[ $REPLY = update ]]
+then
+    sudo apt install #additional depends here
+fi
