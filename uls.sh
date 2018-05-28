@@ -5,11 +5,11 @@ echo "Starting"
 # depends -----------------------------------
 echo "Installing depends..."
 apt update
-apt install toilet figlet screenfetch wget -y
+apt install toilet figlet screenfetch -y
 read -p "Would you like to install additional dependencies? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    sudo apt install aptitude #additional depends here
+    sudo apt install aptitude git wget #additional depends here
 fi
 # -------------------------------------------
 
@@ -35,6 +35,7 @@ then
     echo "listpackages - lists all installed packages"
     echo "install list - used to install applications (apt for beginners)"
     echo "minecraft - installs and runs minecraft"
+    echo "getjosephworks - installs all of josephworks's repositories"
 fi
 
 if [[ $REPLY = quit ]]
@@ -53,6 +54,37 @@ then
     wget http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar
     rm Minecraft.jar.*
     java -jar Minecraft.jar
+fi
+
+if [[ $REPLY = getjosephworks ]]
+then
+    echo "creating directory josephworks"
+    mkdir josephworks
+    cd josephworks
+    echo "Cloning all modules (Repositories)"
+    git clone https://github.com/josephworks/ultimatelinux.sh.git
+    git clone https://github.com/josephworks/josephworks.git
+    git clone https://github.com/josephworks/Gideon.git
+    git clone https://github.com/josephworks/thunderstorm.git
+    git clone https://github.com/josephworks/Windows-subsystem-for-Linux.git
+    git clone https://github.com/josephworks/serverbuilder.git
+    git clone https://github.com/josephworks/Jenkins-re-start-script.git
+    git clone https://github.com/josephworks/josephworks.github.io.git
+    git clone https://github.com/josephworks/Google-Chrome-Linux-root-fix.git
+    git clone https://github.com/josephworks/Table-Viewer.git
+    git clone https://github.com/josephworks/ThermosServer.git
+    git clone https://github.com/josephworks/katoolin.git
+    git clone https://github.com/josephworks/Gwen-Remade.git
+    git clone https://github.com/josephworks/Glowstone.git
+    git clone https://github.com/josephworks/Paperclip.git
+    git clone https://github.com/josephworks/SpigotCraft.git
+    git clone https://github.com/josephworks/MinecraftMultiversion.git
+    git clone https://github.com/josephworks/Paper.git
+    git clone https://github.com/josephworks/PaperCraft.git
+    git clone https://github.com/josephworks/Registry-Edits.git
+    git clone https://github.com/josephworks/PaperTestServer.git
+    git clone https://github.com/josephworks/Powershell-policy-fix.git
+    echo finished
 fi
 
 if [[ $REPLY = update ]]
