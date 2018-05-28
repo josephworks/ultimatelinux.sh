@@ -60,6 +60,7 @@ then
     git clone https://github.com/josephworks/Registry-Edits.git
     git clone https://github.com/josephworks/PaperTestServer.git
     git clone https://github.com/josephworks/Powershell-policy-fix.git
+    cd ..
     echo finished
 fi
 
