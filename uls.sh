@@ -75,4 +75,4 @@ then
     sudo apt install npm -y
 fi
 
-sudo bash ultimatelinux.sh
+sudo bash ulsrepeat.sh
