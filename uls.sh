@@ -18,9 +18,15 @@ then
     echo "Commands:"
     echo "help - lists commands"
     echo "update - updates the running linux distro"
+    echo "listpackages - lists all installed packages"
 fi
 
 if [[ $REPLY = update ]]
 then
     sudo aptitude update && sudo aptitude upgrade
+fi
+
+if [[ $REPLY = listpackages ]]
+then
+    dpkg --get-selections
 fi
