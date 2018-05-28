@@ -27,6 +27,7 @@ then
     echo "help - lists commands"
     echo "update - updates the running linux distro"
     echo "listpackages - lists all installed packages"
+    echo "install - used to install applications (apt for beginners)"
 fi
 
 if [[ $REPLY = update ]]
