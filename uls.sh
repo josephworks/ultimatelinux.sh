@@ -15,10 +15,10 @@ read -p "ULS> "
 
 if [[ $REPLY = help ]]
 then
-    printf "Commands"
+    echo "Commands:"
 fi
 
 if [[ $REPLY = update ]]
 then
-    sudo apt install #additional depends here
+    sudo apt update
 fi
