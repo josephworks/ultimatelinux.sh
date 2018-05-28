@@ -4,9 +4,30 @@ if [[ $REPLY = help ]]
 then
     echo "Commands:"
     echo "help - lists commands"
+    echo "quit - exits uls"
+    echo "clear - clears the console or terminal"
     echo "update - updates the running linux distro"
     echo "listpackages - lists all installed packages"
     echo "install list - used to install applications (apt for beginners)"
+    echo "minecraft - installs and runs minecraft"
+fi
+
+if [[ $REPLY = quit ]]
+then
+    exit
+fi
+
+if [[ $REPLY = clear ]]
+then
+    clear
+fi
+
+if [[ $REPLY = minecraft ]]
+then
+    sudo apt install default-jre default-jdk -y
+    wget http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar
+    rm Minecraft.jar.*
+    java -jar Minecraft.jar
 fi
 
 if [[ $REPLY = update ]]

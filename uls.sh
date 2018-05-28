@@ -26,6 +26,7 @@ then
     echo "Commands:"
     echo "help - lists commands"
     echo "quit - exits uls"
+    echo "clear - clears the console or terminal"
     echo "update - updates the running linux distro"
     echo "listpackages - lists all installed packages"
     echo "install list - used to install applications (apt for beginners)"
@@ -35,6 +36,11 @@ fi
 if [[ $REPLY = quit ]]
 then
     exit
+fi
+
+if [[ $REPLY = clear ]]
+then
+    clear
 fi
 
 if [[ $REPLY = minecraft ]]
