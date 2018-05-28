@@ -11,6 +11,7 @@ then
     sudo apt install aptitude #additional depends here
 fi
 # -------------------------------------------
+
 read -p "ULS> "
 
 if [[ $REPLY = help ]]
@@ -29,4 +30,10 @@ fi
 if [[ $REPLY = listpackages ]]
 then
     dpkg --get-selections
+fi
+
+if [[ $REPLY = install ]]
+then
+    echo "Invalid Usage: install [App]"
+    echo "To see a list of apps you wan install, run "install list""
 fi
