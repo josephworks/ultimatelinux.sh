@@ -45,7 +45,7 @@ then
     echo "To see a list of apps you wan install, run "install list""
 fi
 
-if [[ $REPLY = install list ]]
+if [[ $REPLY = "install list" ]]
 then
     echo "Installable Apps:"
     echo "java"
@@ -54,22 +54,22 @@ then
     echo "nodejs"
 fi
 
-if [[ $REPLY = install java ]]
+if [[ $REPLY = "install java" ]]
 then
     sudo apt install default-jre default-jdk -y
 fi
 
-if [[ $REPLY = install maven ]]
+if [[ $REPLY = "install maven" ]]
 then
     apt install maven -y
 fi
 
-if [[ $REPLY = install npm ]]
+if [[ $REPLY = "install npm" ]]
 then
     sudo apt install npm -y
 fi
 
-if [[ $REPLY = install nodejs ]]
+if [[ $REPLY = "install nodejs" ]]
 then
     sudo apt install npm -y
 fi
