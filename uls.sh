@@ -67,7 +67,7 @@ then
     ./scripts/build.sh
     sleep 3
     sudo mkdir mcserver
-    sudo mv target/glowstone.jar /../mcserver/glowstone.jar
+    sudo mv target/glowstone.jar ../mcserver/glowstone.jar
     cd ..
     cd mcserver
     java -Xms1G -Xmx1G -XX:+UseG1GC -jar glowstone.jar
