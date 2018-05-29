@@ -156,7 +156,7 @@ fi
 
 if [[ $REPLY = "install webmin" ]]
 then
-    wget https://www.webmin.com/download/deb/webmin-current.deb
+    wget https://prdownloads.sourceforge.net/webadmin/webmin_1.881_all.deb
     dpkg -i webmin-current.deb
 fi
 
