@@ -35,6 +35,7 @@ then
     echo "listpackages - lists all installed packages"
     echo "install list - used to install applications (apt for beginners)"
     echo "minecraft - installs and runs minecraft"
+    echo "glowstone - installs and compiles glowstone minecraft server"
     echo "getjosephworks - installs all of josephworks's repositories"
 fi
 
@@ -54,6 +55,22 @@ then
     wget http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar
     rm Minecraft.jar.*
     java -jar Minecraft.jar
+fi
+
+if [[ $REPLY = glowstone ]]
+then
+    echo "Make sure maven and java are installed."
+    echo "To install maven, run "install maven" followed buy "install java" in ULS."
+    sleep 3
+    git clone https://github.com/GlowstoneMC/Glowstone.git
+    cd Glowstone
+    ./scripts/build.sh
+    sleep 3
+    mv /target/glowstone.jar /../mcserver/glowstone.jar
+    cd ..
+    cd mcserver
+    java -Xms1G -Xmx1G -XX:+UseG1GC -jar glowstone.jar
+    cd ..
 fi
 
 if [[ $REPLY = getjosephworks ]]
