@@ -103,6 +103,7 @@ then
     echo "npm"
     echo "nodejs"
     echo "docker"
+    echo "webmin"
 fi
 
 if [[ $REPLY = "install java" ]]
@@ -128,6 +129,12 @@ fi
 if [[ $REPLY = "install docker" ]]
 then
     sudo apt install docker.io -y
+fi
+
+if [[ $REPLY = "install webmin" ]]
+then
+    wget https://www.webmin.com/download/deb/webmin-current.deb
+    dpkg -i webmin-current.deb
 fi
 
 sudo bash ulsrepeat.sh
