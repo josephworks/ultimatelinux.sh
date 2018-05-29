@@ -133,7 +133,7 @@ fi
 
 if [[ $REPLY = "install webmin" ]]
 then
-    sudo apt install webmin
+    sudo aptitude install webmin
 fi
 
 sudo bash ulsrepeat.sh
