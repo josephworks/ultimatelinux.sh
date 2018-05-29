@@ -133,8 +133,7 @@ fi
 
 if [[ $REPLY = "install webmin" ]]
 then
-    wget https://prdownloads.sourceforge.net/webadmin/webmin_1.881_all.deb
-    dpkg -i webmin_1.881_all.deb
+    sudo apt install webmin
 fi
 
 sudo bash ulsrepeat.sh
