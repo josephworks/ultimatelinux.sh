@@ -31,6 +31,7 @@ then
     echo "clear - clears the console or terminal"
     echo "update - updates the running linux distro"
     echo "ulsupdate - updates ULS"
+    echo "ulsrestart - restarts uls"
     echo "listpackages - lists all installed packages"
     echo "install list - used to install applications (apt for beginners)"
     echo "minecraft - installs and runs minecraft"
@@ -99,6 +100,11 @@ then
     git clone https://github.com/josephworks/ultimatelinux.sh
     cd ultimatelinux.sh
     echo "please restart ULS"
+fi
+
+if [[ $REPLY = ulsrestart ]]
+then
+    uls.sh
 fi
 
 if [[ $REPLY = listpackages ]]
