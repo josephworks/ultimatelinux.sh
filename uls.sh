@@ -18,6 +18,7 @@ clear
 screenfetch
 sleep 5
 clear
+figlet ULS
 # -------------------------------------------
 
 read -p "ULS> "
