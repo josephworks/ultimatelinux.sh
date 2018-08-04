@@ -21,6 +21,7 @@ clear
 figlet ULS
 # -------------------------------------------
 
+echo "type "help" for help"
 read -p "ULS> "
 
 if [[ $REPLY = help ]]
