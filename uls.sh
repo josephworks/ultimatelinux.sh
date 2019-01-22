@@ -4,12 +4,17 @@ echo "Starting"
 
 # depends -----------------------------------
 echo "Installing depends..."
-apt update
-apt install toilet figlet screenfetch -y
 read -p "Would you like to install additional dependencies? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    sudo apt install aptitude git wget #additional depends here
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
+    apt update
+    sudo apt install aptitude git wget toilet figlet screenfetch #additional depends here
 fi
 # -------------------------------------------
 
@@ -52,6 +57,12 @@ fi
 
 if [[ $REPLY = minecraft ]]
 then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
     sudo apt install default-jre default-jdk -y
     wget http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar
     rm Minecraft.jar.*
@@ -109,6 +120,12 @@ fi
 
 if [[ $REPLY = update ]]
 then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
     sudo aptitude update && sudo aptitude upgrade
 fi
 
@@ -150,31 +167,67 @@ fi
 
 if [[ $REPLY = "install java" ]]
 then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
     sudo apt install default-jre default-jdk -y
 fi
 
 if [[ $REPLY = "install maven" ]]
 then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
     apt install maven -y
 fi
 
 if [[ $REPLY = "install npm" ]]
 then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
     sudo apt install npm -y
 fi
 
 if [[ $REPLY = "install nodejs" ]]
 then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
     sudo apt install npm -y
 fi
 
 if [[ $REPLY = "install docker" ]]
 then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
     sudo apt install docker.io -y
 fi
 
 if [[ $REPLY = "install webmin" ]]
 then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
     sudo aptitude install webmin
 fi
 
