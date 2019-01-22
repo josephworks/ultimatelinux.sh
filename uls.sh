@@ -145,7 +145,7 @@ fi
 
 if [[ $REPLY = listpackages ]]
 then
-    sudo dpkg -l
+    dpkg -l
 fi
 
 if [[ $REPLY = install ]]
