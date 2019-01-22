@@ -140,6 +140,7 @@ fi
 
 if [[ $REPLY = ulsrestart ]]
 then
+    clear
     uls.sh
 fi
 
