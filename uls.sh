@@ -229,7 +229,9 @@ then
       echo "Please run as root"
       exit
     fi
-    sudo aptitude install webmin
+    wget http://prdownloads.sourceforge.net/webadmin/webmin_1.900_all.deb
+    sudo apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python
+    sudo dpkg -i webmin_1.900_all.deb
 fi
 
 sudo bash ulsrepeat.sh
