@@ -88,34 +88,37 @@ fi
 
 if [[ $REPLY = getjosephworks ]]
 then
-    echo "creating directory josephworks"
     mkdir josephworks
     cd josephworks
-    echo "Cloning all modules (Repositories)"
-    git clone https://github.com/josephworks/ultimatelinux.sh.git
-    git clone https://github.com/josephworks/josephworks.git
-    git clone https://github.com/josephworks/Gideon.git
-    git clone https://github.com/josephworks/thunderstorm.git
-    git clone https://github.com/josephworks/Windows-subsystem-for-Linux.git
-    git clone https://github.com/josephworks/serverbuilder.git
-    git clone https://github.com/josephworks/Jenkins-re-start-script.git
-    git clone https://github.com/josephworks/josephworks.github.io.git
-    git clone https://github.com/josephworks/Google-Chrome-Linux-root-fix.git
-    git clone https://github.com/josephworks/Table-Viewer.git
-    git clone https://github.com/josephworks/ThermosServer.git
-    git clone https://github.com/josephworks/katoolin.git
-    git clone https://github.com/josephworks/Gwen-Remade.git
-    git clone https://github.com/josephworks/Glowstone.git
-    git clone https://github.com/josephworks/Paperclip.git
-    git clone https://github.com/josephworks/SpigotCraft.git
-    git clone https://github.com/josephworks/MinecraftMultiversion.git
-    git clone https://github.com/josephworks/Paper.git
-    git clone https://github.com/josephworks/PaperCraft.git
-    git clone https://github.com/josephworks/Registry-Edits.git
-    git clone https://github.com/josephworks/PaperTestServer.git
-    git clone https://github.com/josephworks/Powershell-policy-fix.git
-    cd ..
-    echo finished
+    echo "Cloning all Repositories to ./josephworks"
+    git clone https://github.com/josephworks/AtomMC
+    git clone https://github.com/josephworks/HelpDesk
+    git clone https://github.com/josephworks/BungeeSpigot
+    git clone https://github.com/josephworks/Scripts
+    git clone https://github.com/josephworks/startxcli.sh
+    git clone https://github.com/josephworks/files
+    git clone https://github.com/josephworks/McEmeraldtnt
+    git clone https://github.com/josephworks/McAdventure
+    git clone https://github.com/josephworks/ultimatelinux.sh
+    git clone https://github.com/josephworks/josephworks
+    git clone https://github.com/josephworks/josephworks.github.io
+    git clone https://github.com/josephworks/MinecraftMultiversion
+    git clone https://github.com/josephworks/McCompile
+    git clone https://github.com/josephworks/Gwen-Remade
+    git clone https://github.com/josephworks/CMDWorkspaceTools
+    git clone https://github.com/josephworks/serverbuilder
+    git clone https://github.com/josephworks/WebIDE
+    git clone https://github.com/josephworks/JenkinsServer
+    git clone https://github.com/josephworks/Registry-Edits
+    git clone https://github.com/josephworks/PaperCraft
+    git clone https://github.com/josephworks/pythonws
+    git clone https://github.com/josephworks/SpigotCraft
+    git clone https://github.com/josephworks/ThermosServer
+    git clone https://github.com/josephworks/Gideon
+    git clone https://github.com/josephworks/Windows-subsystem-for-Linux
+    git clone https://github.com/josephworks/Google-Chrome-Linux-root-fix
+    git clone https://github.com/josephworks/Powershell-policy-fix
+    echo "Finished the cloning process"
 fi
 
 if [[ $REPLY = update ]]
