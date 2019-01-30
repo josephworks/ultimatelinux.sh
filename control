@@ -1,0 +1,11 @@
+Package: UltimateLinux
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: libsomethingorrather (>= 1.2.13), anotherDependency (>= 1.2.6)
+Maintainer: Joseph Robinson <smartech56@gmail.com>
+Description: UltimateLinux
+ UltimateLinux is The Ultimate Linux Script.
+ Src: https://github.com/josephworks/ultimatelinux.sh
+ 
