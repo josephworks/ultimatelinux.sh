@@ -237,4 +237,8 @@ then
     sudo dpkg -i webmin_1.900_all.deb
 fi
 
-sudo bash ulsrepeat.sh
+if [ "$EUID" -ne 0 ]
+      bash ulsrepeat.sh
+    else
+    sudo bash ulsrepeat.sh
+fi
