@@ -14,13 +14,13 @@ then
       exit
     fi
     apt update
-    sudo apt install aptitude git wget toilet figlet screenfetch #additional depends here
+    sudo apt install aptitude git wget toilet figlet neofetch #additional depends here
 fi
 # -------------------------------------------
 
 # terminal setup ----------------------------
 clear
-screenfetch
+neofetch
 sleep 5
 clear
 figlet ULS
