@@ -167,6 +167,7 @@ then
     echo "nodejs"
     echo "docker"
     echo "webmin"
+    echo "jenkins"
 fi
 
 if [[ $REPLY = "install java" ]]
@@ -235,6 +236,23 @@ then
     wget http://prdownloads.sourceforge.net/webadmin/webmin_1.900_all.deb
     sudo apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python
     sudo dpkg -i webmin_1.900_all.deb
+fi
+
+if [[ $REPLY = "install jenkins" ]]
+then
+    if [ "$EUID" -ne 0 ]
+      then 
+      echo ""
+      echo "Please run as root"
+      exit
+    fi
+    wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+    sudo echo "# Jenkins install - by UltimateLinux" > /etc/apt/sources.list
+    sudo echo "deb https://pkg.jenkins.io/debian binary/" > /etc/apt/sources.list
+    sudo apt-get update && sudo apt-get install jenkins
+    echo "DO NOT RUN THIS COMMAND AGAIN!!!"
+    echo "It will add another duplicate entry to your sources.list"
+    echo "that might break APT or DPKG"
 fi
 
 if [ "$EUID" -ne 0 ]
