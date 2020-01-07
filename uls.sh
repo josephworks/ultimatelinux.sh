@@ -23,7 +23,7 @@ clear
 neofetch
 sleep 5
 clear
-figlet ULS
+figlet UltimateLinux v1.0
 # -------------------------------------------
 
 echo "type "help" for help"
