@@ -82,7 +82,7 @@ then
     mv target/glowstone.jar ../mcserver/glowstone.jar
     cd ..
     cd mcserver
-    java -Xms1G -Xmx1G -XX:+UseG1GC -jar glowstone.jar
+    java -Xms128M -Xmx1G -XX:+UseG1GC -jar glowstone.jar
     cd ..
 fi
 
