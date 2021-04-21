@@ -27,6 +27,9 @@ figlet UltimateLinux v1.0
 # -------------------------------------------
 
 echo "type "help" for help"
+
+while true
+do
 read -p "ULS> "
 
 if [[ $REPLY = help ]]
@@ -255,8 +258,4 @@ then
     echo "that might break APT or DPKG"
 fi
 
-if [ "$EUID" -ne 0 ]
-      bash ulsrepeat.sh
-    else
-    sudo bash ulsrepeat.sh
-fi
+done
