@@ -8,9 +8,9 @@ read -p "Would you like to install additional dependencies? " -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     apt update
@@ -61,7 +61,7 @@ fi
 if [[ $REPLY = minecraft ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
+      then
       echo ""
       echo "Please run as root"
       exit
@@ -127,9 +127,9 @@ fi
 if [[ $REPLY = update ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     sudo aptitude update && sudo aptitude upgrade
@@ -176,9 +176,9 @@ fi
 if [[ $REPLY = "install java" ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     sudo apt install default-jre default-jdk -y
@@ -187,9 +187,9 @@ fi
 if [[ $REPLY = "install maven" ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     apt install maven -y
@@ -198,9 +198,9 @@ fi
 if [[ $REPLY = "install npm" ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     sudo apt install npm -y
@@ -209,9 +209,9 @@ fi
 if [[ $REPLY = "install nodejs" ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     sudo apt install npm -y
@@ -220,9 +220,9 @@ fi
 if [[ $REPLY = "install docker" ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     sudo apt install docker.io -y
@@ -231,9 +231,9 @@ fi
 if [[ $REPLY = "install webmin" ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     wget http://prdownloads.sourceforge.net/webadmin/webmin_1.900_all.deb
@@ -244,9 +244,9 @@ fi
 if [[ $REPLY = "install jenkins" ]]
 then
     if [ "$EUID" -ne 0 ]
-      then 
-      echo ""
-      echo "Please run as root"
+      then
+        echo ""
+        echo "Please run as root"
       exit
     fi
     wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
