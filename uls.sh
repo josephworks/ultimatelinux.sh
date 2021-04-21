@@ -53,6 +53,11 @@ then
     exit
 fi
 
+if [[ $REPLY = exit ]]
+then
+    exit
+fi
+
 if [[ $REPLY = clear ]]
 then
     clear
